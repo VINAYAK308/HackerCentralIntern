@@ -127,29 +127,66 @@
 //             initial={{opacity:0,x:100}} 
 //             transition={{duration:1}}className="my-4">Phone No: "+91 7498564907 "</motion.p>
 //            <a href="#" className="border-b"> Email: "vinayak.jadhav_comp23@pccoer.in"</a>
-           
+
 //           </div>
 //         </div>
 
-    
+
 
 //   </div> 
 
 //   );
-  
+
 // };
 // export default App;
 import Navbar from './components/Navbar'
 import Hero from './components/hero'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //added  by trj
+import Home from './components/pages/Home'; //added by trj
+import About from './components/pages/About';
+import Dashboard from './components/pages/Dashboard1';
+import UserDashboard from './components/pages/user-dashboard';
+import AdminDashboard from './components/pages/admin-dashboard';
+import SuperadminDashboard from './components/pages/Superadmin-dashboard';
+
+
+// import {Router,Route} from "react-router-dom" // added by trj
 const App = () => {
   return (
-    <div className="overflow-x-hidden text-neutral-600 antialiased slec bg-black selection:text-cyan-900">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    // <div className="overflow-x-hidden text-neutral-600 antialiased slec bg-black selection:text-cyan-900">
+    //   <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+
+    //   <Navbar />
+    //   <Hero/>
+
+    // </div>
+
+
+    //added by trj
+    <Router>
+      <main>
+      <div className="overflow-x-hidden text-neutral-600 antialiased slec bg-black selection:text-cyan-900">
+      {/* <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div> */}
+
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/user-dashboard" element={<UserDashboard />} />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/Superadmin-dashboard" element={<SuperadminDashboard />} />
+          
+        </Routes>
+        
+      </div>
       
-      <Navbar />
-      <Hero/>
+      </main>
       
-    </div>
+    </Router>
+    
+
+    //ended by trj
   )
 }
 

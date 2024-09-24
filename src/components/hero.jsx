@@ -461,14 +461,28 @@ import logo2 from "../assets/Logo-2.webp";
 import logo3 from "../assets/Logo-3.webp";
 import logo4 from "../assets/Logo-4.webp";
 import smartimg from "../assets/Smart-Image-1.webp"; // Corrected path
-import BLogo1 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/BLogo.webp";
-import BLogo2 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/BLogo2.webp";
-import BLogo3 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/BLogo3.webp";
-import BLogo4 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/BLogo4.webp";
+import BLogo1 from "../assets/BLogo.webp";
+import BLogo2 from "../assets/BLogo2.webp";
+import BLogo3 from "../assets/BLogo3.webp";
+import BLogo4 from "../assets/BLogo4.webp";
 import detectimg from "../assets/Detect-Image.webp"; 
-import Clogo1 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/CLogo.png";
-import Clogo2 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/CLogo1.jpeg";
-import Clogo3 from "/Users/trushantramdasjadhav/Desktop/React-Portfolio/src/assets/QRcode.jpg";
+import Clogo1 from "../assets/CLogo.png";
+import Clogo2 from "../assets/CLogo1.jpeg";
+import Clogo3 from "../assets/QRcode.jpg";
+import DLogo1 from "../assets/DLogo1.webp";
+import DLogo2 from "../assets/DLogo2.webp";
+import DLogo3 from "../assets/DLogo3.webp";
+import DLogo4 from "../assets/DLogo4.webp";
+import logo from "../assets/logo.webp";
+import ScanTrack from "../assets/ScanTrack.avif";
+import Nhome from "../assets/Nhome.jpg";
+import learningpath from "../assets/learningpath.jpeg";
+
+
+
+
+
+
 const iconVariants = (duration) => ({
   initial: { y: -10 },
   animate: {
@@ -503,7 +517,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1.5 }}
-              className="text-8xl font-bold items-center text-center tracking-tight text-white lg:mt-16 lg:text-7xl lg:mx-8 mt-8 lg:ml-[260px]"
+              className="text-8xl font-bold items-center text-center tracking-tight text-white lg:mt-16 lg:text-7xl lg:mx-8 mt-8 lg:ml-[400px]"
             >
               Welcome to Secure Lab
             </motion.h1>
@@ -511,17 +525,22 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1.5 }}
-              className="lg:ml-[500px] font-bold text-2xl text-white"
+              className="lg:ml-[650px] font-bold text-2xl text-white"
             >
               By Hacker Central
             </motion.p>
-            <div className="flex mt-6 space-x-4 lg:ml-[420px]">
+            <div className="flex mt-6 space-x-4 lg:ml-[550px]">
+
+              
               <button className="bg-blue-600 text-white py-2 px-5 font-normal rounded-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-105">
-                Explore Learning Path
+               Explore Learning Path
               </button>
-              <button className="bg-blue-900 text-white py-2 px-4 rounded-lg font-normal hover:bg-purple-600 transition-all duration-300 transform hover:scale-105">
-                View Dashboard
+              
+              <button className="bg-blue-900 text-white py-2 px-4 rounded-lg font-normal hover:bg-purple-600 transition-all duration-300 transform hover:scale-105" to="/dashboard">
+               View Dashboard
               </button>
+          
+              
             </div>
           </motion.div>
           <div className="w-full lg:w-full lg:p-8">
@@ -530,7 +549,7 @@ const Home = () => {
                 variants={iconVariants(4)}
                 initial="initial"
                 animate="animate"
-                src={home}
+                src={Nhome}
                 style={{ width: "900px", height: "auto" }}
                 className="border-2 border-purple-500"
                 alt="Home"
@@ -572,8 +591,8 @@ const Home = () => {
           <br></br>
           <br></br>
           <img
-            src={smartimg}
-            style={{ width: "460px", height: "auto" }}
+            src={learningpath}
+            style={{ width: "460px",   height: "auto", marginLeft:"60px" }}
             className="ml-4 justify-center mr-9 transition-transform duration-500 ease-in-out hover:scale-110 "
             alt="Smart Image"
           />
@@ -742,28 +761,236 @@ const Home = () => {
         </div>
         <div className="w-full lg:w-1/2 p-4  border-purple-400">
         <img
-            src={detectimg}
-            style={{ width: "460px", height: "auto" }}
-            className="ml-4 justify-center mr-9 transition-transform duration-500 ease-in-out hover:scale-90 rounded-2xl"
+            src={ScanTrack}
+            style={{ width: "550px", height: "500px" }}
+            className="ml-4 justify-center mr-9 lg:ml-12 transition-transform duration-500 ease-in-out hover:scale-90 rounded-2xl"
             alt="Smart Image"
           />
           
-          {/* <motion.div
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 1.5 }}
-            className="flex flex-wrap items-center justify-center gap-4"
-          >
-            <LogoAnimation src={BLogo1} alt="Logo 1" duration={2.5} />
-            <LogoAnimation src={BLogo2} alt="Logo 2" duration={3} />
-            <LogoAnimation src={BLogo3} alt="Logo 3" duration={5} />
-            <LogoAnimation src={BLogo4} alt="Logo 4" duration={2} />
-          </motion.div> */}
-           
+          
           
            
         </div>
+        
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className="w-full lg:w-full">
+        <motion.h1
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1.5 }}
+              className="text-8xl font-bold items-center text-center tracking-tight text-white lg:mt-16 lg:text-6xl lg:mx-4 mt-8 lg:ml-[40px]"
+            >
+              Protect your Architecture
+            </motion.h1>
+            <br></br>
+         
+            <p className="text-white font-normal items-center text-center tracking-tight">Feugiat volutpat sit ullamcorper id imperdiet bibendum. Ornare nulla sit sed sagittis</p>
+            <p className="text-white font-normal items-center text-center tracking-tight">turpis viverra parturient. Nam tortor blandit at quis felis urna, nullam. Sit amet.</p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <motion.div
+              
+              className="flex flex-wrap items-center justify-center gap-3 ml-2 mr-2"
+            >
+              <motion.div
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1.5 }}
+                className="rounded-2xl p-4 border-t border-b border-purple-400  "
+              >
+                <img src={DLogo1} style={{ width: "240px", height: "auto" }} alt="Logo 1" />
+                <br></br>
+                <br></br>
+                <strong className="text-white items-center   justify-center lg:ml-5 ">Add Site to Remote Scanner</strong>
+                <p className="text-white font-normal items-center text-center tracking-tight">Neque volutpat tempus<br></br> adipiscing ultricies a viverra.<br></br> Egestas ut ornare.
+</p>
+              </motion.div>
+              <motion.div
+                 whileInView={{ opacity: 1, y: 0 }}
+                 initial={{ opacity: 0, y: -100 }}
+                 transition={{ duration: 1.5 }}
+                
+                className="rounded-2xl filter p-4 border-t border-b border-purple-400 "
+              >
+                <img src={DLogo2} style={{ width: "240px", height: "auto" }} alt="Logo 2" />
+                <br></br>
+                <br></br>
+                <strong className="text-white items-center   justify-center lg:ml-9">Activate PHP Scanner</strong>
+                <p className="text-white font-normal items-center text-center tracking-tight">Feugiat proin id ac viverra cras<br></br>mollis sed in. Tellus nunc<br></br>pellentesque felis.
+</p>
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1.5 }}
+                
+                className="rounded-2xl p-4 border-t border-b border-purple-400 "
+              >
+                <img src={DLogo3} style={{ width: "240px", height: "auto" }} alt="Logo 3" />
+                <br></br>
+                <br></br>
+                <strong className="text-white items-center   justify-center lg:ml-5 ">Adjust Monitoring Types</strong>
+                <p className="text-white font-normal items-center text-center tracking-tight">Quis turpis feugiat eros<br></br>pellenesque. Sit et molestie<br></br>phasellus vulputate.
+</p>
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -100 }}
+                transition={{ duration: 1.5 }}
+                className="rounded-2xl  p-4 border-t border-b border-purple-400 "
+              >
+                <img src={DLogo4} style={{ width: "240px", height: "auto" }} alt="Logo 4" />
+                <br></br>
+                <br></br>
+                <strong className="text-white items-center   justify-center lg:ml-5 ">Setup Alerts and Email Reports</strong>
+                <p className="text-white font-normal items-center text-center tracking-tight">Id ac sit sit enim. Felis, felis,<br></br>proin justo egestas. Non<br></br>quisque tempor.
+</p>
+              </motion.div>
+            </motion.div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <hr className="border-0 h-0.5 bg-purple-500 my-4"></hr>
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1.5 }}
+              className="flex flex-wrap items-center justify-center gap-3 ml-2 mr-2 border-3 "
+            >
+                
+              <motion.div
+                variants={iconVariants(2.5)}
+                initial="initial"
+              
+                className="rounded-2xl p-4    "
+              >
+                <h1 className="text-white text-7xl items-center lg:ml-9" >99%</h1>
+                
+                
+                <p className="text-slate-300 font-normal items-center ml-3 text-center tracking-tight">Customer satisfaction
+</p>
+              </motion.div>
+              <motion.div
+                variants={iconVariants(3)}
+                initial="initial"
+                
+                className="rounded-2xl filter p-4  "
+              >
+                 <h1 className="text-white text-7xl items-center lg:ml-9" >500+</h1>
+                
+                
+                <p className="text-slate-300 font-normal items-center ml-3 text-center tracking-tight">Sites cleaned
+</p>
+                
+              </motion.div>
+              <motion.div
+                variants={iconVariants(5)}
+                initial="initial"
+                
+                className="rounded-2xl p-4 "
+              >
+                <h1 className="text-white text-7xl items-center lg:ml-9" >30M+</h1>
+                
+                
+                <p className="text-slate-300 font-normal items-center ml-3 text-center tracking-tight">Monthly pageviews
+</p>
+               
+              </motion.div>
+              <motion.div
+                variants={iconVariants(2)}
+                initial="initial"
+                
+                className="rounded-2xl  p-4  "
+              >
+                <h1 className="text-white text-7xl items-center lg:ml-9" >90%</h1>
+                
+                
+                <p className="text-slate-300 font-normal items-center ml-3 text-center tracking-tight">Avg. speed increased 
+</p>
+              </motion.div>
+             
+            </motion.div>
+            <hr className="border-0 h-0.5 bg-purple-500 my-4"></hr>
+            <br></br>
+            <br></br>
+           
+            <motion.div
+              
+              className="flex flex-wrap items-center justify-between m-16"
+            >
+              
+              <div className="items-center justify-center  ">
+              <img src={logo} alt="Company Logo" className="w-28 h-26 lg:ml-16  items-center justify-center" />
+              <p className="text-white text-bold text-center justify-center">Offdef Cyber Solutions LLP</p>
+              <p className="text-slate-300 font-normal items-center ml-3  tracking-tight">Course, programme, website content<br></br> and curriculum listed are subject to<br></br> change without prior notice.</p>
+             </div>
+             <div className="items-left justify-left ">
+              <p className="text-white text-bold items-center justify-center lg:ml-3">Company</p>
+              <br></br>
+              
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">About</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">Blog</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">Become a Mentor</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">FAQ</a>
+             </div>
+             <div className="items-left justify-left ">
+              <p className="text-white text-bold items-center justify-center lg:ml-3">Offerings</p>
+              <br></br>
+              
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">Academy</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">Enterprise</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight"></a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight"></a>
+             </div>
+             <div className="items-left justify-left ">
+              <p className="text-white text-bold items-center justify-center lg:ml-3 ">Contact Us</p>
+              <br></br>
+              
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">+91 99538 59662</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">support@offdef.com</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">LLP IN: ACD-8141</a>
+              <br></br>
+              <br></br>
+              <a className="text-slate-300 font-normal items-center ml-3  tracking-tight">GST:  36AAIFO7509E1Z7</a>
+             </div>
+              
+              
+            </motion.div>
+           
+            
+            <hr className="border-0 h-0.5 bg-purple-500 my-4"></hr>
+            <footer className="flex flex-wrap item-center justify-center m-4">
+              <p className="text-slate-100 font-normal items-center ml-3  tracking-tight" >Copyright © 2023 offdef.com </p>
+
+            </footer>
+            
+
+        </div>
+        
+
+      
+      
     </div>
   );
 };
